@@ -1,0 +1,39 @@
+# Build artefacts
+dist/
+*.zip
+*.xpi
+*.crx
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Generated PNG icons (run scripts/generate-icons.sh to create them)
+EDGE/icons/icon16.png
+EDGE/icons/icon48.png
+EDGE/icons/icon128.png
+FIREFOX/icons/icon16.png
+FIREFOX/icons/icon48.png
+FIREFOX/icons/icon128.png
+
+# OS artefacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor artefacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

@@ -1,0 +1,24 @@
+{
+  "name": "no-youtube-shorts",
+  "version": "1.0.0",
+  "description": "Bloque l'interface « Shorts » de YouTube et restaure l'affichage classique des vidéos.",
+  "private": true,
+  "scripts": {
+    "generate-icons": "./scripts/generate-icons.sh",
+    "package:edge": "./scripts/package-edge.sh",
+    "package:firefox": "./scripts/package-firefox.sh",
+    "package:all": "./scripts/package-edge.sh && ./scripts/package-firefox.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/editeurcc/no-youtube-shorts.git"
+  },
+  "keywords": [
+    "webextension",
+    "youtube",
+    "shorts",
+    "edge",
+    "firefox"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="22" fill="#282828"/>
+  <!-- YouTube-style red play rectangle -->
+  <rect x="16" y="34" width="96" height="60" rx="14" fill="#ff0000"/>
+  <!-- Play triangle -->
+  <polygon points="50,48 50,80 86,64" fill="white"/>
+  <!-- Blocking diagonal bar -->
+  <line x1="100" y1="28" x2="28" y2="100" stroke="white" stroke-width="11" stroke-linecap="round"/>
+</svg>
