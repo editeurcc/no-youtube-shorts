@@ -1,0 +1,9 @@
+{
+  "policies": {
+    "Extensions": {
+      "Install": [
+        "file:///C:/Program Files/Mozilla Firefox/distribution/NO-YOUTUBE-SHORTS-GUI-FIREFOX.xpi"
+      ]
+    }
+  }
+}

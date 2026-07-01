@@ -1,0 +1,28 @@
+C:\Users\wios\Desktop\Projets.2026\Edge-Mozilla\NO-YOUTUBE-SHORTS-GUI\EDGE\manifest.json
+C:\SSD (W 11) 2To\NO-YOUTUBE-SHORTS-GUI\NO-YOUTUBE-SHORTS-GUI.zip
+
+Expand-Archive -Path .\NO-YOUTUBE-SHORTS-GUI.zip -DestinationPath .\NO-YOUTUBE-SHORTS-GUI -Force
+
+
+
+mon agent IA ma créer l'extension NO-YOUTUBE-SHORTS-GUI pour Mozilla et Edge
+sur Mozilla elle c'est bien installer mai je ne comprend pas comment faut l'installer sur Edge
+la façon est très compliquer Ya t'il une façon simple comme sur Mozilla de l'installer ?
+je peut te partager le readme d'installation pour que tu voie ce qu'il ma ecris si tu veux voir ce readme dit le moi.
+en plus je me suis aperçu que cette extension na pas d'icone
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

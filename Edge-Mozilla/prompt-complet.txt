@@ -1,0 +1,74 @@
+Je veux que tu me génères une extension de navigateur avec interface graphique (GUI) qui masque les Shorts sur YouTube. L’extension doit être fournie dans un fichier ZIP téléchargeable contenant deux dossiers : un dossier pour Edge/Chrome/Brave/Opera (Manifest V3) et un dossier pour Firefox (Manifest V2).
+
+L’extension doit inclure une interface graphique simple et propre, accessible via l’icône de l’extension. Cette interface doit contenir :
+
+- Une case à cocher : "Masquer les Shorts"
+- Une case à cocher : "Masquer les Stories"
+- Une case à cocher : "Masquer les Reels"
+- Un bouton "Appliquer"
+- Un bouton "Réinitialiser"
+- Un texte indiquant : "Extension No Shorts – Version GUI"
+
+IMPORTANT :
+- Quand une case est cochée, l’élément correspondant doit être masqué sur YouTube.
+- Quand une case est décochée, l’élément doit réapparaître.
+- Les vidéos normales ne doivent jamais être masquées, même dans les résultats de recherche.
+- Pas de support YouTube TV.
+- Pas d’options avancées.
+- Pas de filtres automatiques : uniquement ce que l’utilisateur coche.
+
+Structure du ZIP demandé :
+
+NO-YOUTUBE-SHORTS-GUI.zip
+│
+├── EDGE/
+│   ├── manifest.json
+│   ├── content.js
+│   ├── popup.html
+│   └── popup.js
+│
+└── FIREFOX/
+    ├── manifest.json
+    ├── content.js
+    ├── popup.html
+    └── popup.js
+
+Contenu des fichiers :
+
+1) EDGE/manifest.json (Manifest V3)
+- Doit déclarer :
+  - "action": { "default_popup": "popup.html" }
+  - "content_scripts": pour injecter content.js sur YouTube
+  - Permissions nécessaires : "storage"
+
+2) EDGE/content.js
+- Doit lire les options stockées via chrome.storage
+- Doit masquer Shorts, Stories, Reels selon les cases cochées
+- Ne doit jamais masquer les vidéos normales
+
+3) EDGE/popup.html
+- Interface graphique simple :
+  - Cases à cocher
+  - Boutons
+  - Style minimaliste
+
+4) EDGE/popup.js
+- Gestion des cases à cocher
+- Sauvegarde des options via chrome.storage
+- Bouton "Appliquer" qui met à jour les filtres
+- Bouton "Réinitialiser" qui remet tout à OFF
+
+5) FIREFOX/manifest.json (Manifest V2)
+- Même logique que la version Edge
+- Utiliser "browser_action" au lieu de "action"
+
+6) FIREFOX/content.js
+- Même logique que Edge, mais avec browser.storage
+
+7) FIREFOX/popup.html
+- Identique à la version Edge
+
+8) FIREFOX/popup.js
+- Identique à la version Edge mais avec API browser.*
+
+Le ZIP final doit être téléchargeable directement.

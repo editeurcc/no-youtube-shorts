@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "No YouTube Shorts - GUI",
+  "version": "1.0",
+  "description": "Extension No Shorts – Version GUI",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png",
+    "32": "icon32.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png",
+      "32": "icon32.png"
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>No YouTube Shorts — Support</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#121417">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon128.png">
+    <link rel="apple-touch-icon" sizes="48x48" href="icons/icon48.png">
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="favicon.png">
+    <style>
+        /* Reset and compatibility helpers */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* screen-reader helper (unused but handy) */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+    </style>
+    <style>
+        :root {
+            --bg: #121417;
+            --card: #1c1f23;
+            --muted: #9aa3ad;
+            --accent: #4aa3ff;
+            --accent-2: #2db26a;
+            --text: #e6eef6;
+            --max-width: 1000px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 32px 12px;
+            background: linear-gradient(180deg, var(--bg), #0f1113);
+            color: var(--text);
+            font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .wrap {
+            width: min(96%, var(--max-width));
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: clamp(12px, 2.5vw, 20px);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), #0066cc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin: 0
+        }
+
+        a {
+            color: var(--accent)
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+            border-radius: 12px;
+            padding: 18px;
+            margin: 14px 0;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px) saturate(120%);
+            -webkit-backdrop-filter: blur(8px) saturate(120%);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--text)
+        }
+
+        ul {
+            margin: 0 0 12px 20px
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .download {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: linear-gradient(180deg, var(--accent), #0a6ed8);
+            color: white;
+            text-decoration: none;
+            margin-top: 8px
+        }
+
+        footer {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 22px
+        }
+
+        @media (max-width:640px) {
+            .wrap {
+                padding: 12px;
+                margin: 16px
+            }
+
+            .logo {
+                width: 48px;
+                height: 48px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo">NY</div>
+            <div>
+                <h1>No YouTube Shorts — Support</h1>
+                <div class="muted">Page d’assistance et téléchargement</div>
+            </div>
+        </header>
+
+        <p>Merci d’utiliser <strong>No YouTube Shorts — GUI</strong>. Voici comment nous signaler un problème ou
+            télécharger
+            l’extension.</p>
+
+        <div class="card">
+            <h2>Signaler un bug</h2>
+            <p>Ouvre une issue sur le dépôt : <a href="https://github.com/TON_PSEUDO/no-youtube-shorts/issues"
+                    target="_blank" rel="noopener">https://github.com/TON_PSEUDO/no-youtube-shorts/issues</a></p>
+        </div>
+
+        <div class="card">
+            <h2>Contact</h2>
+            <p>Envoi un mail : <a href="mailto:contact@tondomaine.com">contact@tondomaine.com</a></p>
+        </div>
+
+        <div class="card">
+            <h2>Téléchargement (optionnel)</h2>
+            <p>Télécharger l’XPI signé : <a class="download"
+                    href="/support/NO-YOUTUBE-SHORTS-GUI-FIREFOX.xpi">Télécharger XPI signé</a></p>
+            <p class="muted">Remarque : assure‑toi d’uploader la version signée par AMO. Si tu fournis l’XPI non signé,
+                Firefox Release peut bloquer l’installation.</p>
+        </div>
+
+        <div class="card">
+            <h2>Tests recommandés</h2>
+            <ul>
+                <li>Installer l’extension.</li>
+                <li>Aller sur <a href="https://www.youtube.com" target="_blank"
+                        rel="noopener">https://www.youtube.com</a> et vérifier que la section « Shorts » n’apparaît
+                    plus.</li>
+                <li>Cliquer l’icône de l’extension pour activer/désactiver, puis rafraîchir la page.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <small>Version 1.0 — Aucune donnée personnelle collectée.</small>
+        </footer>
+    </div>
+</body>
+
+</html>

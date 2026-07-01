@@ -1,0 +1,69 @@
+Je veux que tu ajoutes une icône personnalisée à mon extension NO-YOUTUBE-SHORTS-GUI pour Edge (Manifest V3) et Firefox (Manifest V2).
+
+Voici le design exact de l’icône que tu dois créer :
+
+- Un carré arrondi.
+- Fond rouge YouTube.
+- Le triangle “Play” blanc de YouTube à gauche.
+- À droite, un rectangle vertical (format 9:16) pour symboliser les Shorts.
+- Ce rectangle vertical doit être barré par un trait diagonal.
+- Un petit cercle rouge “interdit” doit être placé par-dessus le rectangle vertical.
+- Style moderne, propre, minimaliste.
+- Pas de texte.
+
+Tu dois générer les icônes en 4 tailles :
+- icon16.png
+- icon32.png
+- icon48.png
+- icon128.png
+
+Ensuite, tu dois mettre à jour les manifest.json pour Edge et Firefox :
+
+1) Manifest V3 (Edge)
+Ajouter :
+"icons": {
+  "16": "icon16.png",
+  "32": "icon32.png",
+  "48": "icon48.png",
+  "128": "icon128.png"
+},
+Et dans "action":
+"default_icon": "icon48.png"
+
+2) Manifest V2 (Firefox)
+Ajouter :
+"icons": {
+  "16": "icon16.png",
+  "32": "icon32.png",
+  "48": "icon48.png",
+  "128": "icon128.png"
+},
+Et dans "browser_action":
+"default_icon": "icon48.png"
+
+Tu dois ensuite intégrer ces icônes dans les deux dossiers :
+
+NO-YOUTUBE-SHORTS-GUI/
+├── EDGE/
+│   ├── manifest.json
+│   ├── content.js
+│   ├── popup.html
+│   ├── popup.js
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   └── icon128.png
+└── FIREFOX/
+    ├── manifest.json
+    ├── content.js
+    ├── popup.html
+    ├── popup.js
+    ├── icon16.png
+    ├── icon32.png
+    ├── icon48.png
+    └── icon128.png
+
+Enfin, tu dois me fournir un ZIP téléchargeable contenant les deux dossiers EDGE et FIREFOX avec les icônes intégrées et les manifest.json mis à jour.
+
+Le ZIP final doit s’appeler :
+NO-YOUTUBE-SHORTS-GUI-ICON.zip
