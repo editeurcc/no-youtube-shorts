@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff0000">
+  <meta name="description" content="Bloque l'interface « Shorts » de YouTube et restaure l'affichage classique des vidéos.">
+
+  <title>No YouTube Shorts</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="icon.svg" alt="No YouTube Shorts" class="site-logo">
+    <h1 class="site-title">No YouTube Shorts</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-tagline">
+        Naviguez sur YouTube sans les Shorts.
+      </p>
+      <div class="install-buttons">
+        <a
+          href="https://microsoftedge.microsoft.com/addons/detail/no-youtube-shorts"
+          class="btn btn-edge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Installer sur <strong>Edge</strong>
+        </a>
+        <a
+          href="https://addons.mozilla.org/fr/firefox/addon/no-youtube-shorts/"
+          class="btn btn-firefox"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Installer sur <strong>Firefox</strong>
+        </a>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Fonctionnalités</h2>
+      <ul class="feature-list">
+        <li>🚫 Redirige les URL <code>/shorts/*</code> vers les vidéos classiques <code>/watch?v=</code></li>
+        <li>🧹 Masque les sections « Shorts » sur la page d'accueil et dans les résultats</li>
+        <li>📌 Supprime l'entrée « Shorts » de la barre de navigation latérale</li>
+        <li>🔌 Activable / désactivable en un clic depuis l'icône de l'extension</li>
+        <li>🔒 Aucune donnée collectée — 100 % local</li>
+      </ul>
+    </section>
+
+    <section class="browsers">
+      <h2>Compatibilité</h2>
+      <table class="compat-table">
+        <thead>
+          <tr>
+            <th>Navigateur</th>
+            <th>Manifest</th>
+            <th>Méthode de redirection</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Microsoft Edge ≥ 88</td>
+            <td>V3</td>
+            <td>declarativeNetRequest</td>
+          </tr>
+          <tr>
+            <td>Mozilla Firefox ≥ 58</td>
+            <td>V2</td>
+            <td>webNavigation + tabs.update</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://github.com/editeurcc/no-youtube-shorts" target="_blank" rel="noopener">
+      GitHub
+    </a>
+    &middot; Licence MIT &middot; &copy; 2026 editeurcc
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./service-worker.js')
+        .catch(console.error);
+    }
+  </script>
+</body>
+</html>

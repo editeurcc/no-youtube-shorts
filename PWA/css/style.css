@@ -1,0 +1,183 @@
+/* =========================================================
+   No YouTube Shorts – PWA companion stylesheet
+   ========================================================= */
+
+/* Reset & base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-border: #2e2e2e;
+  --color-text: #e8e8e8;
+  --color-muted: #aaaaaa;
+  --color-red: #ff0000;
+  --color-red-dark: #cc0000;
+  --color-edge: #0078d4;
+  --color-firefox: #ff6611;
+  --radius: 10px;
+  --max-width: 720px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px clamp(16px, 5vw, 48px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.site-title {
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ── Main ────────────────────────────────────────────────── */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px clamp(16px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+}
+
+.hero-tagline {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--color-muted);
+  margin-bottom: 28px;
+}
+
+.install-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-edge {
+  background: var(--color-edge);
+}
+
+.btn-firefox {
+  background: var(--color-firefox);
+}
+
+/* Features */
+.features h2,
+.browsers h2 {
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-list li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-size: 0.95rem;
+}
+
+code {
+  background: #2a2a2a;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Compat table */
+.compat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.compat-table th,
+.compat-table td {
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.compat-table th {
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
